@@ -46,4 +46,4 @@ namespace HotelProject.BusinessLayer.Concrete
         }
     }
 }
-}
+
