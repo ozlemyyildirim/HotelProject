@@ -2,6 +2,10 @@
 using HotelProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace HotelProject.WebApi.Controllers
 {
@@ -29,7 +33,7 @@ namespace HotelProject.WebApi.Controllers
             return Ok();
 
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteService(int id)
         {
             var values = _ServiceService.TGetByID(id);
@@ -52,5 +56,6 @@ namespace HotelProject.WebApi.Controllers
             return Ok(values);
 
         }
+      
     }
 }
